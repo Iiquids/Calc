@@ -1,4 +1,4 @@
-const domain = "haha.edinis.ga"
+const domain = "gay"
 
 function getHistory(){
 	return document.getElementById("history-value").innerText;

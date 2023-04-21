@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-theme="luxury" id="themer">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="calcLogo.png">
+	<link rel="stylesheet" type="text/css" href="calc/calc.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <link href=" ./css/full.css " rel="stylesheet " type="text/css " />
+    <link href=" ./css/scroll.css " rel="stylesheet " type="text/css " id="scroller" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="dev" onclick="closePop()">
+        <div class="navbar bg-base-100">
+            <header class="sticky top-0 z-50"></header>
+
+            <div class="node" id="node"></div>
+            <div class="cursor" id="cursor"></div>
+			
+            <div class="navbar-start"></div>
+
+            <div class="navbar-center">
+				<a class="normal-case text-xl label-text">Calculator</a>
+            </div>
+            <div class="navbar-end">
+				<a class="btn btn-ghost normal-case text-xl" id="Access">Login</a>
+			</div>
+        </div>
+
+		<div id="container">
+			<div id="calculator" class="bg-base-200">
+				<div id="result">
+					<div id="history">
+						<p id="history-value"></p>
+					</div>
+					<div id="output" style="background-color: rgba(0, 0, 0, 0.1); border-radius: 12px">
+						<p id="output-value"></p>
+					</div>
+				</div>
+				<div id="keyboard">
+					<button class="operator" id="clear">C</button>
+					<button class="operator" id="backspace">CE</button>
+					<button class="operator" id="%">%</button>
+					<button class="operator" id="/">&#247;</button>
+					<button class="number btn-ghost btn-active" id="7">7</button>
+					<button class="number btn-ghost btn-active" id="8">8</button>
+					<button class="number btn-ghost btn-active" id="9">9</button>
+					<button class="operator" id="*">&times;</button>
+					<button class="number btn-ghost btn-active" id="4">4</button>
+					<button class="number btn-ghost btn-active" id="5">5</button>
+					<button class="number btn-ghost btn-active" id="6">6</button>
+					<button class="operator" id="-">-</button>
+					<button class="number btn-ghost btn-active" id="1">1</button>
+					<button class="number btn-ghost btn-active" id="2">2</button>
+					<button class="number btn-ghost btn-active" id="3">3</button>
+					<button class="operator" id="+">+</button>
+					<button class="operator" onclick="openCloak(false);"></button>
+					<button class="btn-ghost number btn-active" id="0">0</button>
+					<button class="operator" onclick="openCloak(true);"></button>
+					<button class="operator" id="=">=</button>
+				</div>
+			</div>
+		</div>
+		<!-- <script> // Development
+			void(() => {
+				const script = document.createElement('script');
+				script.crossOrigin = 'anonymous';
+				script.integrity = 'sha256-Zz2LCa5JP/pTvQZgI64e/nH4Wp84M2rLGUb2AtrGtPY=';
+				script.onload = () => eruda.init();
+				script.src = 'https://cdn.jsdelivr.net/npm/eruda@2.4.1/eruda.js';
+				document.head.appendChild(script);
+			})();
+		</script> -->
+    </div>
+
+	<div class="popup" id="popup">
+		<br><br>
+		<h2>Please enter code</h2>
+		<p id="desc" class="w-full max-w-xs " style="color: red; font-size: small;">ㅤ</p>
+		<input type="text" id="auth" name="lname" class="input input-bordered input-outline w-full max-w-xs normal-case text-xl label-text" style="text-align: center; width: 50%;"><br><br>
+		<input type="submit" value="Submit" class="btn btn-ghost2 normal-case text-xl" onclick="setTimeout(() => { Submit(); }, 150);">
+		<br><br>
+	</div>
+
+	<script src="calc/calcscript.js"></script>
+	<script src="./js/darkmode.js "></script>
+
+</body>
+
+</html>

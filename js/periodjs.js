@@ -3,8 +3,8 @@ function cureTime(timea, timeb) {
     if (timea > 12) {
         timea = timea - 12
     }
-    if (timeb == 7) {
-        timeb = "07"
+    if (timeb < 10 && timeb >= 0) {
+        timeb = "0" + timeb
     }
     return "" + timea + ":" + timeb
 }
@@ -24,7 +24,6 @@ function getDateSchool() {
         end.setHours(times[i + 1][0], times[i + 1][1])
         if (current >= start && current < end) {
             let nextDate = cureTime(end.getHours(), end.getMinutes())
-            console.log("Next Period Ends at " + nextDate)
             return nextDate
         }
         i++;
@@ -47,7 +46,7 @@ function foo() {
     if (getDateTitle() == "Sat" || getDateTitle() == "Sun") {
         document.getElementById("Period").innerText = "";
     } else {
-        document.getElementById("Period").innerText = "Next Period: " + getDateSchool();
+        document.getElementById("Period").innerText = ".+* Next Period: " + getDateSchool() + " *+.";
     }
 
     setTimeout(foo, 5000);

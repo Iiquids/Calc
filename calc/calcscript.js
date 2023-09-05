@@ -1,5 +1,5 @@
 const domain1 = "fort.edin.gay";
-const domain2 = "fort.edin.gay";
+const domain2 = "domain.edin.gay";
 
 // if (localStorage.getItem("Player") == "Premium") {
 //     document.getElementsByClassName("navbar-end")[0].innerHTML = "";
